@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blue Lock | Player Database</title>
+
+    <!-- bootstrap and pyscript -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+
+    <style>
+        body {
+            background-color: #050b18;
+            color: white;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        /* gif background slot */
+        .background-gif {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.22;
+            z-index: -1;
+        }
+
+        .main-container {
+            max-width: 650px;
+            margin: 90px auto;
+            padding: 20px;
+        }
+
+        .title {
+            color: #38aaff;
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-shadow: 0 0 15px #007bff;
+        }
+
+        .card {
+            background-color: rgba(8, 20, 43, 0.94);
+            border: 1px solid #168cff;
+            border-radius: 15px;
+            color: white;
+        }
+
+        .form-control {
+            background-color: #101d35;
+            color: white;
+            border: 1px solid #168cff;
+        }
+
+        .form-control:focus {
+            background-color: #101d35;
+            color: white;
+            border-color: #38aaff;
+            box-shadow: 0 0 10px #168cff;
+        }
+
+        .form-control::placeholder {
+            color: #9aaac0;
+        }
+
+        .btn-blue {
+            background-color: #087df5;
+            color: white;
+            font-weight: bold;
+            border: none;
+        }
+
+        .btn-blue:hover {
+            background-color: #005bc4;
+            color: white;
+        }
+
+        .player-card {
+            background-color: #101d35;
+            border-left: 4px solid #38aaff;
+            padding: 20px;
+            border-radius: 8px;
+            line-height: 2;
+        }
+
+        .player-card h3 {
+            color: #38aaff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <img class="background-gif"
+         src="https://i.pinimg.com/originals/ea/b8/6f/eab86fd5b374f03c2c12388d03df0d6e.gif"
+         alt="Blue Lock background">
+
+    <div class="container main-container">
+
+        <div class="text-center mb-4">
+            <h1 class="title">BLUE LOCK</h1>
+            <p>PLAYER DATABASE | FIND YOUR EGO</p>
+        </div>
+
+        <div class="card p-4 shadow-lg">   
+
+            <h4 class="text-center mb-4">
+                PLAYER INFORMATION FINDER
+            </h4>
+
+            <label for="element_Name" class="form-label">
+                Enter Player Code
+            </label>
+
+            <input
+                type="text"
+                id="element_Name"
+                class="form-control"
+                placeholder="Example: ISG"
+            >
+
+            <button
+                type="button"
+                py-click="element_checker"
+                class="btn btn-blue mt-3"
+            >
+                SEARCH PLAYER
+            </button>
+
+            <div id="result" class="mt-4">
+                Enter a player code to access their profile.
+            </div>
+
+        </div>
+
+        <p class="text-center mt-4 text-secondary">
+            ONLY THE STRONGEST EGO SURVIVES.
+        </p>
+
+    </div>
+
+    <py-script src="main.py"></py-script>
+
+</body>
+</html>
